@@ -1,0 +1,31 @@
+{
+    "menu": {
+        "home": "Home",
+        "about": "About",
+        "gallery": "Gallery",
+        "skills": "Skills",
+        "team": "Team",
+        "contact": "Contact",
+        "portfolio": "Portfolio"
+    },
+    "motivation": "Sometimes later, becomes never, do it now . . .",
+    "about": {
+        "me": "About Me",
+        "main": "Main",
+        "hobby": "Hobby",
+        "study": "Education",
+        "experience": "Experience",
+        "biography": "Biography",
+        "my": "My name's Oybek. Last name Mukhiddinov. I'm 20 years old. I'm from Gizhduvan district, Bukhara region, Uzbekistan. ",
+        "experience-text": "I chose web programming because I have been interested in programming since I was young. My main programming language is JavaScript. I am currently writing code in the JavaScript framework Vue. I have worked on many freelance projects before. I have been working for UDEVS since August 2020. I have almost 1 year of experience. I will soon learn Node js and become a FullStack programmer",
+        "hobby-main": {
+            "cinema": "Watch the Cinema",
+            "cinema-text": "I'm interested watching movies. I mostly watch movies in the fiction, melodrama and horror genres. I really like the movies made by Marvel. It’s hard to imagine life without movies",
+            "playgame": "Playing Game",
+            "playgame-text": "I am interested in cyber sports. I played CS GO and Need For Speed \u200B\u200Bgames. I also played Sniper Ghost Warrior. I like playing these games"
+        }
+    },
+    "skills": {
+        "name": "Skills"
+    }
+}
