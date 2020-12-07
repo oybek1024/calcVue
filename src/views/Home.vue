@@ -53,19 +53,7 @@
 
                     <div class="col-md-offset-3 col-md-6 col-sm-12">
                          <div class="home-info">
-                           <u-animate-container>
-                             <u-animate
-                                 name="fadeInUp"
-                                 delay="0.4s"
-                                 duration="1s"
-                                 :iteration="1"
-                                 :offset="0"
-                                 animateClass="animated"
-                                 :begin="false"
-                             >
-                               <h3 class="wow fadeInUp" data-wow-delay="0.4s">Mukhiddinov Oybek's personal blog</h3>
-                             </u-animate>
-                           </u-animate-container>
+                               <h3>Mukhiddinov Oybek's personal blog</h3>
                               <h1>{{ $t('motivation') }}</h1>
                               <form action="" method="get" class="online-form">
                                    <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
@@ -85,7 +73,7 @@
                <div class="row">
 
                     <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
+                         <div  class="wow bounceInUp section-title" data-wow-duration="2s">
                               <h1>{{ $t('about.me') }}</h1>
                          </div>
                     </div>
@@ -221,7 +209,6 @@
      </section>
 
     <!-- GALLERY -->
-    <image-lightbox :media="lightbox" :showLightBox="false"></image-lightbox>
     <section id="gallery" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row">
@@ -234,7 +221,7 @@
 
           <div v-for="(item,i) in images" :key="i" class="col-md-3 col-sm-4">
               <div class="gallery">
-                <div class="show">
+                <div class="show" @click="imageShow(i)">
                   <h3 style="color: white">View</h3>
 <!--                  <img class="showimg" src="../assets/search.png">-->
                 </div>
@@ -246,127 +233,32 @@
       </div>
     </section>
 
-     <!-- TESTIMONIAL -->
-     <section id="testimonial" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
 
-                    <div class="col-md-6 col-sm-12">
-                         <div class="testimonial-image"></div>
-                    </div>
 
-                    <div class="col-md-6 col-sm-12">
-                         <div class="testimonial-info">
+    <!-- PRICING -->
+    <section id="pricing" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row">
 
-                              <div class="section-title">
-                                   <h1>What People Say</h1>
-                              </div>
-
-                              <div class="owl-carousel owl-theme">
-                                   <div class="item">
-                                        <h3>Vestibulum tempor facilisis efficitur. Sed nec nisi sit amet nibh pellentesque elementum. In viverra ipsum ornare sapien rhoncus ullamcorper.</h3>
-                                        <div class="testimonial-item">
-                                             <img src="images/tst-image1.jpg" class="img-responsive" alt="Michael">
-                                             <h4>Michael</h4>
-                                        </div>
-                                   </div>
-
-                                   <div class="item">
-                                        <h3>Donec pretium tristique elit eget sodales. Pellentesque posuere, nunc id interdum venenatis, leo odio cursus sapien, ac malesuada nisl libero eget urna.</h3>
-                                        <div class="testimonial-item">
-                                             <img src="images/tst-image2.jpg" class="img-responsive" alt="Sofia">
-                                             <h4>Sofia</h4>
-                                        </div>
-                                   </div>
-
-                                   <div class="item">
-                                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing eiusmod tempor incididunt ut labore et dolore magna.</h3>
-                                        <div class="testimonial-item">
-                                             <img src="images/tst-image3.jpg" class="img-responsive" alt="Monica">
-                                             <h4>Monica</h4>
-                                        </div>
-                                   </div>
-                              </div>
-
-                         </div>
-                    </div>
-
-               </div>
+          <div class=" col-md-12 col-sm-12">
+            <div class="section-title">
+              <h1>{{ $t('menu.gallery') }}</h1>
+            </div>
           </div>
-     </section>
 
-
-     <!-- PRICING -->
-     <section id="pricing" data-stellar-background-ratio="0.5">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-12 col-sm-12">
-                         <div class="section-title">
-                              <h1>Choose any plan</h1>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="pricing-thumb">
-                             <div class="pricing-title">
-                                  <h2>Student</h2>
-                             </div>
-                             <div class="pricing-info">
-                                   <p>20 Responsive Designs</p>
-                                   <p>10 Dashboards</p>
-                                   <p>1 TB Storage</p>
-                                   <p>6 TB Bandwidth</p>
-                                   <p>24-hour Support</p>
-                             </div>
-                             <div class="pricing-bottom">
-                                   <span class="pricing-dollar">$200/mo</span>
-                                   <a href="#" class="section-btn pricing-btn">Register now</a>
-                             </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="pricing-thumb">
-                             <div class="pricing-title">
-                                  <h2>Business</h2>
-                             </div>
-                             <div class="pricing-info">
-                                   <p>50 Responsive Designs</p>
-                                   <p>30 Dashboards</p>
-                                   <p>2 TB Storage</p>
-                                   <p>12 TB Bandwidth</p>
-                                   <p>15-minute Support</p>
-                             </div>
-                             <div class="pricing-bottom">
-                                   <span class="pricing-dollar">$350/mo</span>
-                                   <a href="#" class="section-btn pricing-btn">Register now</a>
-                             </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="pricing-thumb">
-                             <div class="pricing-title">
-                                  <h2>Professional</h2>
-                             </div>
-                             <div class="pricing-info">
-                                   <p>100 Responsive Designs</p>
-                                   <p>60 Dashboards</p>
-                                   <p>5 TB Storage</p>
-                                   <p>25 TB Bandwidth</p>
-                                   <p>1-minute Support</p>
-                             </div>
-                             <div class="pricing-bottom">
-                                   <span class="pricing-dollar">$550/mo</span>
-                                   <a href="#" class="section-btn pricing-btn">Register now</a>
-                             </div>
-                         </div>
-                    </div>
-
-               </div>
+          <div v-for="(item,i) in images" :key="i" class="col-md-3 col-sm-4">
+            <div class="gallery">
+              <div class="show" @click="imageShow(i)">
+                <h3 style="color: white">View</h3>
+                <!--                  <img class="showimg" src="../assets/search.png">-->
+              </div>
+              <img class="img" :src="item">
+            </div>
           </div>
-     </section>
+
+        </div>
+      </div>
+    </section>
 
 
      <!-- CONTACT -->
@@ -422,6 +314,9 @@
                </div>
           </div>
      </footer>
+
+<!--    IMAGE_VIEW-->
+    <image-lightbox :media="lightbox" ref="imageView" :showLightBox="false" :startAt="startAt" :showCaption="true"></image-lightbox>
   </div>
 </template>
 
@@ -459,12 +354,12 @@ import image17 from '../gallery/image17.jpg'
 import image18 from '../gallery/image18.jpg'
 import image19 from '../gallery/image19.jpg'
 import image20 from '../gallery/image20.jpg'
-import { UAnimateContainer, UAnimate } from "vue-wow"
+// import { UAnimateContainer, UAnimate } from "vue-wow"
 export default {
-  components: {
-    UAnimateContainer,
-    UAnimate
-  },
+  // components: {
+  //   UAnimateContainer,
+  //   UAnimate
+  // },
   data () {
     return {
       skills: [
@@ -481,22 +376,113 @@ export default {
         { name: 'Rest API', image: rest },
         { name: 'Mongo DB', image: mongo },
       ],
+      startAt: 0,
       images: [
           image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,
           image12,image13,image14,image15,image16,image17,image18,image19,image20
       ]
     }
   },
+  methods: {
+    imageShow(i) {
+      console.log('Image')
+      this.startAt = i
+      this.$refs.imageView.showImage(i)
+    }
+  },
   computed: {
     lightbox () {
-      return this.skills.map(e => {
+      return this.images.map((e, i) => {
         return {
-          thumb: e.image,
-          src: e.image,
-          caption: e.name
+          thumb: e,
+          src: e,
+          caption: 'image' + i
         }
       })
     }
   }
 }
 </script>
+<style>
+.owl-dot {
+  outline: none;
+}
+ul {
+  cursor: pointer;
+}
+
+.slide-enter-active {
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.slide-leave-active {
+  -moz-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slide-enter-to,
+.slide-leave {
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.slide-enter,
+.slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
+}
+.lang {
+  display: flex;
+  margin-top: 3px;
+}
+.lang li {
+  border-radius: 50%;
+  list-style-type: none;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lang li:hover {
+  box-shadow: 0px 0px 10px rgb(107, 104, 104);
+}
+.lang_active {
+  box-shadow: 0px 0px 10px rgb(165, 159, 159);
+  border-radius: 50%;
+}
+.makPoint {
+  /*background: url("../public/images/makPointBack.jpg");*/
+  background-size: cover;
+  padding-bottom: 100px;
+  height: 670px;
+}
+.lang_select{
+  background: #eeecec;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  padding: 5px;
+  outline: none;
+  margin-top: 5px;
+  width: 120px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  transition: all ease-in-out 0.4s;
+}
+</style>

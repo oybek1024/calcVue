@@ -5,10 +5,13 @@ import i18n from './language/i18n'
 import image_viewer from 'vue-pure-lightbox'
 import VueLazyLoad from 'vue-lazyload'
 import LightBox from 'vue-image-lightbox'
-import VueWow from 'vue-wow'
-Vue.use(VueWow)
+import 'animate.css'
+import vueWow from 'vue-wow'
+
+
 Vue.component('image-lightbox', LightBox)
 Vue.use(VueLazyLoad)
+Vue.use(vueWow)
 Vue.config.productionTip = false
 Vue.component('image-view', image_viewer)
 new Vue({
